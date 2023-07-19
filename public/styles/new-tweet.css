@@ -42,6 +42,21 @@ textarea {
   font-size: large;
   font-family: "san 3", sans-serif;
   font-weight: 600;
+  background-color: #f4f1ec;
   
 
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(48, 43, 43, 0.5); 
+}
+
+
+.overLimit {
+  color: red;
 }
