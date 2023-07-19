@@ -1,0 +1,47 @@
+ /* main section div {
+  
+} */
+
+main section div button {
+  background-color: #4056A1;
+  font-family: "bungee", cursive;
+  font-weight: 400;
+  color: #FFFFFF;
+  border: 0;
+}
+
+main section form {
+  display: flex;
+  flex-direction: column;
+}
+
+main section form div {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-family: "bungee", sans-serif; 
+  
+
+}
+
+main section form label {
+  display: flex;
+  font-family: "sans 3", sans-serif;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  border: 5px solid rgb(90, 90, 90);
+  outline-width: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: large;
+  font-family: "san 3", sans-serif;
+  font-weight: 600;
+  
+
+}
