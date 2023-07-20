@@ -75,12 +75,28 @@
         <form method="post" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" rows="2" cols="90" ></textarea>
-          <div>
-            <button type="submit">Tweet</button>
+          <div class="tweet-inputs">
+            <button id="tweetSubmit" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <section class="container">
+      <section id="demoTweets" >
+        <article>
+          <header><div><i class="fa-solid fa-user"></i> Rhoda Jacobs</div> <div id="At">@Mrs. Jacobs</div></header>
+          <div id="demoTweetsText"><p>Hello World!</p></div>    
+          <footer id="demoTweetsFooter"> <div>10 days ago</div> <div id="icons" ><i class="fa-solid fa-flag"></i> <i class="fa-solid fa-retweet"></i> <i class="fa-solid fa-heart"></i></div></footer> 
+        </article>
+      </section>
+      <section id="demoTweets">
+        <article>
+          <header><div><i class="fa-solid fa-user"></i> Maya Lipchin</div> <div id="At">@Maya_Maya</div></header>
+          <div id="demoTweetsText"><p>We are living in a simulation O_O</p></div>    
+          <footer id="demoTweetsFooter"> <div>10 days ago</div> <div id="icons" ><i class="fa-solid fa-flag"></i> <i class="fa-solid fa-retweet"></i> <i class="fa-solid fa-heart"></i></div></footer> 
+        </article>
+      </section>
+    </section>
     </main>
   </body>
 </html>
