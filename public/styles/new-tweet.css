@@ -43,9 +43,11 @@ textarea {
   font-family: "san 3", sans-serif;
   font-weight: 600;
   background-color: #f4f1ec;
-
 }
 
+#tweet-text {
+  max-height: 100;
+}
 
 #demoTweets {
   margin-top: 100px;
