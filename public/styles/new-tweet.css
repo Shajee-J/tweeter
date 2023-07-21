@@ -137,6 +137,16 @@ margin-bottom: 20px;
   color: red;
 }
 
+.form-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+}
   
 
 

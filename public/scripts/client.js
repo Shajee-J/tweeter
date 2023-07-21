@@ -2,11 +2,11 @@
 $(document).ready(function () {
  
   let counter = $(".counter");
-let container = $("#tweets-container") 
 
   createTweetElement = (item) => {
 
     const time = timeago.format(item.created_at)
+    
     const escape = function (str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
@@ -36,7 +36,7 @@ let container = $("#tweets-container")
 
   const renderTweets = function (data) {
     // empty the tweet container,
-    $("#tweets-container").empty()   
+    $("#tweets-container").empty()
     for (let item = data.length - 1; item < data.length; item--){
       $('#tweets-container').append(createTweetElement(data[item]));
   }
@@ -48,7 +48,8 @@ let container = $("#tweets-container")
 
     const serializedString = $(event.currentTarget).serialize()
     if (counter.text() < 0){
-      alert("character limit reached!!")
+      $("#error").empty()
+      $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>character limit reached!!`)
     }
 
     else {
@@ -59,10 +60,14 @@ let container = $("#tweets-container")
     })
       .then(res => {
         loadtweets()
+        $("#tweet-text").val("")
+        $(counter).val("140")
+        $(".error").empty()
         console.log(serializedString) 
       })
       .catch(err => {
-        alert("tweet is empty!")
+        $("#error").empty()
+        $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>tweet is empty!`)
       })
 
   }})
@@ -73,8 +78,9 @@ let container = $("#tweets-container")
       url: "/tweets/"
     })
       .then(res => {
-        renderTweets(res)
-        console.log(serializedString)
+       
+        renderTweets(res);
+        console.log(serializedString);
 
       })
   }

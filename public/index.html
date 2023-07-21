@@ -53,7 +53,7 @@
 
     <div id="tweet">
      <span> <span id="write">Write</span> a new tweet</span>
-       <span> <i class="fa-solid fa-angles-down"></i></span>
+       <span> <i class="fa-solid fa-angles-down fa-bounce"></i></span>
     </div>
 
 
@@ -77,12 +77,13 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" rows="2" cols="90" ></textarea>
+          <label for="tweet-text">What are you humming about?</label> 
+          <textarea name="text" id="tweet-text" rows="2" cols="90"></textarea>
           <div class="tweet-inputs">
-            <button class="tweetSubmit" type="submit">Tweet</button>
+            <button class="tweetSubmit" type="submit">Tweet</button> 
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
+          <p class="error" id="error"></p>
         </form>
       </section>
       <section  id="tweets-container">
