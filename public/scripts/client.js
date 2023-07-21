@@ -7,16 +7,21 @@ let container = $("#tweets-container")
   createTweetElement = (item) => {
 
     const time = timeago.format(item.created_at)
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
 
     const $tweet = $(`
         <article id="demoTweets">
           <header>
-          <div><img src=${item.user.avatars}></i> ${item.user.name}</div> 
-          <div id="At">${item.user.handle}</div>
+          <div><img src=${escape(item.user.avatars)}></i> ${escape(item.user.name)}</div> 
+          <div id="At">${escape(item.user.handle)}</div>
           </header>
-          <div id="demoTweetsText"><p>${item.content.text}</p></div>    
+          <div id="demoTweetsText"><p>${escape(item.content.text)}</p></div>    
           <footer id="demoTweetsFooter"> 
-          <div>${time}</div> 
+          <div>${escape(time)}</div> 
           <div id="icons" >
           <i class="fa-solid fa-flag"></i> 
           <i class="fa-solid fa-retweet"></i> 
