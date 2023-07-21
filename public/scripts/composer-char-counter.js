@@ -3,6 +3,8 @@ $(document).ready(function () {
   // using jquery:
 
   let counter = $(".counter");
+  let button = $("#tweetSubmit");
+
 
   const textArea = $("#tweet-text");
 
@@ -11,14 +13,17 @@ $(document).ready(function () {
     const typedCharacters = textArea.val().length;
     
     counter.text( 140 - typedCharacters);
+
     
     if (counter.text() < 0) {
-      counter.addClass("overLimit")
+      counter.addClass("overLimit") 
     }
     
     if (counter.text() > 0) {
       counter.removeClass("overLimit")
+
     }
+
   });
 
 // using vanilla js:
@@ -39,5 +44,6 @@ $(document).ready(function () {
 //         counter.classList.remove("overLimit")
 //       }
 //     })
+
 });
 

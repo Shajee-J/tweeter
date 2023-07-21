@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
-
+ 
+  let counter = $(".counter");
+let container = $("#tweets-container") 
 
   createTweetElement = (item) => {
 
@@ -28,28 +30,37 @@ $(document).ready(function () {
 
 
   const renderTweets = function (data) {
-    for (let item of data) {
-      $('#tweets-container').append(createTweetElement(item));
-    }
-  };
+    // empty the tweet container,
+    $("#tweets-container").empty()   
+    for (let item = data.length - 1; item < data.length; item--){
+      $('#tweets-container').append(createTweetElement(data[item]));
+  }
+};
 
 
-  $("form").on("submit", event => {
+  $("form").on("submit", event => { 
     event.preventDefault()
 
     const serializedString = $(event.currentTarget).serialize()
+    if (counter.text() < 0){
+      alert("character limit reached!!")
+    }
 
+    else {
     $.ajax({
       method: "POST",
       url: "/tweets/",
       data: serializedString
     })
       .then(res => {
-        console.log(serializedString)
-
+        loadtweets()
+        console.log(serializedString) 
+      })
+      .catch(err => {
+        alert("tweet is empty!")
       })
 
-  })
+  }})
 
   const loadtweets = function () {
     $.ajax({
@@ -64,5 +75,6 @@ $(document).ready(function () {
   }
 
 loadtweets()
+
 
 });

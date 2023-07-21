@@ -1,14 +1,23 @@
- /* main section div {
+/* main section div {
   
 } */
 
-#tweetSubmit {
+.tweetSubmit:hover {
+  border: 2px solid #0c3cd8;
+  background-color: #324eac;
+  transition: 20ms;
+}
+
+.tweetSubmit {
+  border-radius: 7px;
   background-color: #4056A1;
   font-family: "bungee", cursive;
   font-weight: 400;
   color: #FFFFFF;
   border: 0;
+  
 }
+
 
  .new-tweet form {
   display: flex;
@@ -61,7 +70,7 @@ margin-bottom: 20px;
 }
 
 #demoTweets:hover {
-  box-shadow: 7px 7px 1px 1px rgba(0, 0, 255, 0.089);
+  box-shadow: 7px 7px 1px 1px rgba(0, 0, 255, 0.267);
 }
 
 
@@ -127,7 +136,6 @@ margin-bottom: 20px;
 .overLimit {
   color: red;
 }
-
 
   
 
