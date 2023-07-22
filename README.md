@@ -21,27 +21,25 @@ This repository is the starter code for the project: Students such as myself, wi
 - Nodemon (optional; recommended for dev work)
 
 
-## Preview
+## Screenshots
 
-alternate layouts for different screen sizes:
+different screen sizing:
 
+![Full sized display](https://github.com/Shajee-J/tweeter/blob/master/docs/fullSized-look.png?raw=true)     
 
-
-
-
-
+![Condensed display for mobile devices such as tablets](https://github.com/Shajee-J/tweeter/blob/master/docs/condensed-look.png?raw=true)
 
 
+reactive displays:
 
-reactive client interface:
-
-
-
+![reactive display for client viewing](https://github.com/Shajee-J/tweeter/blob/master/docs/reactive%20displays%20.png?raw=true)
 
 
+error displays:
+
+![empty tweet error](https://github.com/Shajee-J/tweeter/blob/master/docs/empty%20error.png?raw=true)
 
 
+![surpassed character limit error](https://github.com/Shajee-J/tweeter/blob/master/docs/limit%20error.png?raw=true)
 
 
-
-client error display:
