@@ -1,49 +1,28 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-  // using jquery:
+  // seting up character counter behaviour
 
   let counter = $(".counter");
-  let button = $("#tweetSubmit");
 
 
   const textArea = $("#tweet-text");
 
-  $("#tweet-text").on("input", function () {
+  $("#tweet-text").on("input", function() {
     
     const typedCharacters = textArea.val().length;
     
-    counter.text( 140 - typedCharacters);
+    counter.text(140 - typedCharacters);
 
     
     if (counter.text() < 0) {
-      counter.addClass("overLimit") 
+      counter.addClass("overLimit");
     }
     
     if (counter.text() > 0) {
-      counter.removeClass("overLimit")
+      counter.removeClass("overLimit");
 
     }
 
   });
-
-// using vanilla js:
-
-// let counter = document.querySelector(".counter")
-// let textArea = document.querySelector("#tweet-text")
-
-//   textArea.addEventListener("input", function() {
-//       const typedCharacters = textArea.value.length;
-
-//       counter.textContent = 140 - typedCharacters;
-
-//       if (counter.textContent < 0) {
-//         counter.classList.add("overLimit")
-//       }
-
-//       if (counter.textContent > 0) {
-//         counter.classList.remove("overLimit")
-//       }
-//     })
-
 });
 
