@@ -13,6 +13,8 @@ $(document).ready(function () {
       return div.innerHTML;
     };
 
+
+
     const $tweet = $(`
         <article id="demoTweets">
           <header>
@@ -50,6 +52,9 @@ $(document).ready(function () {
     if (counter.text() < 0){
       $("#error").empty()
       $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>character limit reached!!`)
+      setTimeout(() => {
+        $("#error").empty();
+      }, "2000");
     }
 
     else {
@@ -68,6 +73,9 @@ $(document).ready(function () {
       .catch(err => {
         $("#error").empty()
         $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>tweet is empty!`)
+        setTimeout(() => {
+          $("#error").empty();
+        }, "2000");
       })
 
   }})
