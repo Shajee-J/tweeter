@@ -21,7 +21,7 @@ This repository is the starter code for the project: Students such as myself, wi
 - Nodemon (optional; recommended for dev work)
 
 
-## preview
+## Preview
 
 alternate layouts for different screen sizes:
 
