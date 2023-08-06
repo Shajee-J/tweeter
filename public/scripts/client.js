@@ -20,13 +20,14 @@ $(document).ready(function() {
 
     // html template to be inserted into the tweet-container section
     const $tweet = $(`
-        <article id="demoTweets">
+        <article id="demo-tweets">
           <header>
-          <div><img src=${escape(item.user.avatars)}></i> ${escape(item.user.name)}</div> 
+          <div id="icon-name"><span><img src=${escape(item.user.avatars)}></span><span>${escape(item.user.name)}</span></div>
           <div id="At">${escape(item.user.handle)}</div>
           </header>
-          <div id="demoTweetsText"><p>${escape(item.content.text)}</p></div>    
-          <footer id="demoTweetsFooter"> 
+
+          <div id="demo-tweetsText"><p>${escape(item.content.text)}</p></div>    
+          <footer id="demo-tweetsFooter"> 
           <div>${escape(time)}</div> 
           <div id="icons" >
           <i class="fa-solid fa-flag"></i> 

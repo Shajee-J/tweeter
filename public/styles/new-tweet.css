@@ -1,23 +1,6 @@
-/* main section div {
-  
-} */
-
-.main-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-
-}
 
 
-.tweetSubmit:hover {
-  border: 2px solid #0c3cd8;
-  background-color: #324eac;
-  transition: 20ms;
-}
-
-.tweetSubmit {
+.tweet-submit {
   border-radius: 7px;
   background-color: #4056A1;
   font-family: "bungee", cursive;
@@ -27,8 +10,14 @@
   
 }
 
+.tweet-submit:hover {
+  border: 2px solid #0c3cd8;
+  background-color: #324eac;
+  transition: 20ms;
+  cursor: pointer;
+}
 
- .new-tweet form {
+.new-tweet form {
   display: flex;
   flex-direction: column;
   margin-bottom: -2.33em;
@@ -38,8 +27,8 @@
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  font-family: "bungee", sans-serif; 
-  
+  font-family: "bungee", sans-serif;
+
 
 }
 
@@ -62,44 +51,39 @@ textarea {
   font-family: "san 3", sans-serif;
   font-weight: 600;
   background-color: #f4f1ec;
-  
+  resize: none;
 }
 
 #tweet-text {
   max-height: 6.25em;
 }
 
-#demoTweets {
+
+#demo-tweets {
   margin-top: 6.25em;
   width: 38em;
   display: flex;
   flex-direction: column;
-  justify-items: center ;
+  justify-items: center;
   padding: 0.625em;
   border: solid;
-margin-bottom: 1.25em;
+  margin-bottom: 1.25em;
 }
 
-#demoTweets:hover {
+#demo-tweets:hover {
   box-shadow: 7px 7px 1px 1px rgba(0, 0, 255, 0.267);
 }
 
 
-#demoTweets header {
+
+#demo-tweets footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 100%;
+
 }
 
-#demoTweets footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  
-}
-
-#demoTweets #demoTweetsText {
+#demo-tweets #demo-tweetsText {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -112,19 +96,38 @@ margin-bottom: 1.25em;
   font-weight: 600;
   font-size: 95%;
 }
-#demoTweets #demoTweetsText p {
-word-break: break-all;
-}
-  
 
-#demoTweets #demoTweetsFooter {
+#demo-tweets #demo-tweetsText p {
+  word-break: break-all;
+}
+
+
+#demo-tweets #demo-tweetsFooter {
   margin-top: 10px;
   display: flex;
   font-size: large;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
-#demoTweets #At {
+#demo-tweets header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 100%;
+}
+
+#icon-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#icon-name img {
+  padding-right: 0.5em;
+}
+
+#demo-tweets #At {
   color: #b4bcd6;
   font-family: "san 3", sans-serif;
   font-weight: 600;
@@ -132,28 +135,34 @@ word-break: break-all;
 }
 
 
-#demoTweets #icons {
+#demo-tweets #icons {
   color: #3f4f85;
+}
+
+#demo-tweets #icons:hover {
+  cursor: pointer;
 }
 
 
 .fa-flag:hover {
- color:rgb(230, 188, 3);
+  color: rgb(230, 188, 3);
 }
+
 .fa-heart:hover {
- color:red;
-}
-.fa-retweet:hover {
- color:rgb(230, 188, 3);
-}
-
-
-
-.overLimit {
   color: red;
 }
 
-.form-top{
+.fa-retweet:hover {
+  color: rgb(230, 188, 3);
+}
+
+
+
+.over-limit {
+  color: red;
+}
+
+.form-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -163,7 +172,7 @@ word-break: break-all;
   color: red;
   font-style: italic;
 }
-  
+
 
 
 ::-webkit-scrollbar {
@@ -172,45 +181,53 @@ word-break: break-all;
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(48, 43, 43, 0.5); 
+  -webkit-box-shadow: inset 0 0 6px rgba(48, 43, 43, 0.5);
 }
 
 
 
-  @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
-body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-    #profilePic {
-      height: 40em;
-      width: 50rem;
-      margin-top: 10em;
-      margin-left: 3em;
-      height: 16.66em;
-      display: flex;
-      justify-self: flex-start;
-      align-self: start;
-      flex-direction: column;
-      float: inline-start;
-    }
-
-    .new-tweet {
-      height: 16.66em;
-      margin-top: 4em;
-      margin-bottom: -4em;
-      align-self: center;
-      justify-self: flex-start;
-      flex-direction: column;
-
-    }
-
-    #demoTweets {
-      margin: 3em;
-      padding: 1em;
-    }
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  #profile-pic {
+    height: 40em;
+    width: 50rem;
+    margin-top: 10em;
+    margin-left: 3em;
+    height: 16.66em;
+    display: flex;
+    justify-self: flex-start;
+    align-self: start;
+    flex-direction: column;
+    float: inline-start;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .new-tweet {
+    height: 16.66em;
+    margin-top: 4em;
+    margin-bottom: -4em;
+    align-self: center;
+    justify-self: flex-start;
+    flex-direction: column;
+
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #demo-tweets {
+    margin: 3em;
+    padding: 1em;
+  }
+}

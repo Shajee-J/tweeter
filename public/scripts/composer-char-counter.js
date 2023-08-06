@@ -15,11 +15,11 @@ $(document).ready(function() {
 
     
     if (counter.text() < 0) {
-      counter.addClass("overLimit");
+      counter.addClass("over-limit");
     }
     
     if (counter.text() > 0) {
-      counter.removeClass("overLimit");
+      counter.removeClass("over-limit");
 
     }
 

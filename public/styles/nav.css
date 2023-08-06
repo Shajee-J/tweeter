@@ -10,13 +10,19 @@ nav  {
  top: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  nav {
+    background-color: #f38704;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+}
+
 nav div {
   margin-left: 1.5em;
   margin-right: 1.5em;
   justify-content: center;
   display: flex;
   flex-direction: column;
-
 
 }  
 
