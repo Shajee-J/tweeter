@@ -1,4 +1,4 @@
-
+/* styles for tweet text area and submit button: */
 
 .tweet-submit {
   border-radius: 7px;
@@ -53,6 +53,9 @@ textarea {
   background-color: #f4f1ec;
   resize: none;
 }
+
+
+/* styles for posted tweets: */
 
 #tweet-text {
   max-height: 6.25em;
@@ -157,16 +160,12 @@ textarea {
 }
 
 
+ /* styles for error handling: */
 
 .over-limit {
   color: red;
 }
 
-.form-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 .error {
   color: red;
@@ -185,6 +184,8 @@ textarea {
 }
 
 
+
+/* styling changes for responsive view: */
 
 @media only screen and (min-width: 1024px) {
 

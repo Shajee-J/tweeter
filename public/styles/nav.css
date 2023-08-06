@@ -10,7 +10,7 @@ nav  {
  top: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   nav {
     background-color: #f38704;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
