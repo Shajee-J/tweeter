@@ -55,7 +55,7 @@ $(document).ready(function () {
   $("form").on("submit", event => {
     event.preventDefault()
 
-    if ($("#tweet-text").value.trim().length === 0 ){
+    if ($("#tweet-text").val().trim().length === 0 ){
       $("#error").empty();
       $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>tweet is empty!`);
       $(counter).val("140")
