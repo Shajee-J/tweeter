@@ -20,7 +20,7 @@ $(document).ready(function() {
     
     if (counter.text() > 0) {
       counter.removeClass("over-limit");
-
+        $("#error").empty();
     }
 
   });

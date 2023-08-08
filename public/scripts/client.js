@@ -1,6 +1,6 @@
 
-$(document).ready(function() {
- 
+$(document).ready(function () {
+
   let counter = $(".counter");
 
   // iterates over data obj items passed in and assigns them to an html template
@@ -9,9 +9,9 @@ $(document).ready(function() {
 
     //ms to current time and time differenc converter using an API
     const time = timeago.format(item.created_at);
-   
+
     // to secure incoming html as just text and escape an reactive code procceses that may be injected
-    const escape = function(str) {
+    const escape = function (str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -41,8 +41,8 @@ $(document).ready(function() {
   };
 
   // goes over the current data obj and passes individual 'items' to the createTweetElement() function
-  const renderTweets = function(data) {
-    
+  const renderTweets = function (data) {
+
     // empty the tweet container, before loading to avoid duplicate displays.
     $("#tweets-container").empty();
     for (let item = data.length - 1; item < data.length; item--) {
@@ -53,15 +53,23 @@ $(document).ready(function() {
   // form behavior, error handing, and error display behaviour
 
   $("form").on("submit", event => {
-    event.preventDefault();
+    event.preventDefault()
+
+    if ($("#tweet-text").value.trim().length === 0 ){
+      $("#error").empty();
+      $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>tweet is empty!`);
+      $(counter).val("140")
+      $("#tweet-text").val("")
+      return;
+    }
+
 
     const serializedString = $(event.currentTarget).serialize();
+    
     if (counter.text() < 0) {
       $("#error").empty();
       $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>character limit reached!!`);
-      setTimeout(() => {
-        $("#error").empty();
-      }, "2000");
+     
     } else {
       $.ajax({
         method: "POST",
@@ -75,11 +83,7 @@ $(document).ready(function() {
           $(".error").empty();
         })
         .catch(err => {
-          $("#error").empty();
-          $("#error").append(`<i class="fa-solid fa-triangle-exclamation fa-bounce"></i>tweet is empty!`);
-          setTimeout(() => {
-            $("#error").empty();
-          }, "2000");
+         console.log(err.message)
         });
 
     }
@@ -87,16 +91,19 @@ $(document).ready(function() {
 
   // requesting tweets to be loaded in
 
-  const loadtweets = function() {
+  const loadtweets = function () {
     $.ajax({
       method: "GET",
       url: "/tweets/"
     })
       .then(res => {
-       
-        renderTweets(res);
-       
 
+        renderTweets(res);
+
+
+      })
+      .catch(err => {
+        console.log(err.message)
       });
   };
 
